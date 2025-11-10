@@ -119,8 +119,29 @@ let bool = Boolean(0);       // false
 console.log(bool);
 ```
 
-&nbsp;
+&nbsp; 
+### iii. Truthy vs Falsy values
 
+In JavaScript, values are evaluated in boolean contexts as either **truthy** or **falsy**.
+
+**Falsy Values** - All values that are not falsy are truthy. Examples:
+
+```js
+false, 0, -0, 0n, "", null, undefined, NaN
+```
+
+**Truthy Values** - The following values are considered `false` in boolean contexts:
+
+```js
+true, 1, -1, "hello", [], {}, function(){}
+```
+**Example:**
+```js
+if ("") console.log("Truthy"); // won't run
+if ("hello") console.log("Truthy"); // runs
+```
+
+&nbsp;
 #### JavaScript Data Types - Tricky Questions
 
 ```js
@@ -142,7 +163,11 @@ console.log([1] == 1); // Output: true - [1] is converted to "1", then "1" == 1 
 
 console.log('5' + 1); // Output: "51" - + triggers string concatenation
 
-console.log('5' - 1); // Output: 4 - - triggers numeric conversion
+console.log(2 + 3 + 4 + '5'); // 2+3+4=9, then 9+'5'='95' (string concatenation)
+
+console.log('5' - 1);       // Output: 4 - triggers numeric conversion ('5' -> 5, 5 - 1 = 4)
+
+console.log('10'-'4'-'3'-2+'5'); // 10-4-3-2=1, then 1+'5'='15' (string concatenation)
 
 console.log([] + []);       // Output: "" - arrays are converted to strings, "" + "" = ""
 
@@ -166,5 +191,4 @@ console.log(0 == {});       // Output: false - {} -> "[object Object]" -> NaN, 0
 
 console.log(null == undefined); // Output: true - special case, null and undefined are equal with ==
 
-console.log('5' - 1);       // Output: 4 - - triggers numeric conversion ('5' -> 5, 5 - 1 = 4)
 ```
