@@ -120,7 +120,7 @@ console.log(bool);
 ```
 
 &nbsp; 
-### iii. Truthy vs Falsy values
+### iv. Truthy vs Falsy values
 
 In JavaScript, values are evaluated in boolean contexts as either **truthy** or **falsy**.
 
