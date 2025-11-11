@@ -144,6 +144,9 @@ if ("hello") console.log("Truthy"); // runs
 &nbsp;
 #### JavaScript Data Types - Tricky Questions
 
+> *💡 **Note:** There is no example using the `===` operator here. It is discussed later in the **Operators** section.*
+
+
 ```js
 console.log(typeof null); // Output: "object" - null is a primitive, but typeof returns "object" due to historical JS quirk
 
