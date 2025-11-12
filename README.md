@@ -8,7 +8,7 @@ Ideal for **beginners** building a solid foundation or **developers** preparing 
 ## Table of Contents
 
 **1.** [Data Types](#data-types)
-
+**2.** [Operators](#operators)
 
 ---
 
@@ -265,7 +265,123 @@ console.log(NaN !== NaN); // true
 
 > **Q: What is the output of `console.log([1] == 1);`**  
 > **A:** Output: `true` — `[1]` is converted to number `1`, so `1 == 1`.
-
-
 </details>
 
+---
+&nbsp;
+
+## Operators 
+
+### i. Arithmetic Operators
+Arithmetic operators are used to perform mathematical operations: `+`, `-`, `*`, `/`, `%`, `**`, `++`, `--`
+&nbsp;
+**For example:** 
+```
+let a = 2;
+let b = a ** 3; // 2 raised to 3 = 8
+a++;             // a becomes 3
+```
+
+&nbsp;
+### ii. Arithmetic Operators
+Assignment operators are used to assign values to variables, often combining assignment with arithmetic operations: `=`, `+=`, `-=`, `*=`, `/=`, `%=`
+&nbsp;
+**For example:**  
+```
+let a = 5;   // assigns 5 to a
+a += 3;      // equivalent to a = a + 3 → a becomes 8
+a /= 3;      // equivalent to a = a / 3 → a becomes 4
+a %= 3;      // equivalent to a = a % 3 → a becomes 1
+```
+
+&nbsp;
+### iii. Comparison Operators
+Comparison operators are used to compare values and return a boolean (true or false), such as: `==`, `===`, `!=`, `!==`, `>`, `<`, `>=`, `<=`
+&nbsp;
+**For example:**  
+```
+let x = 5;
+let y = '5';
+
+console.log(x == y);   // true (value is equal, type is ignored, JS may coerce the type)
+console.log(x === y);  // false (value is equal but type is different, no type coercion)
+console.log(x != 3);   // true (x is not equal to 3)
+console.log(x > 3);    // true (x is greater than 3)
+console.log(x <= 5);   // true (x is less than or equal to 5)
+```
+
+&nbsp;
+### iv. Logical Operators
+Logical operators are used to combine or manipulate boolean values (true or false), such as: `&&`, `||`, `!`, `??`, `!!`
+&nbsp;
+**For example:**  
+```
+let x = true;
+let y = false;
+
+let andResult = x && y; // false, because both are not true
+let orResult  = x || y; // true, because at least one is true
+let notX      = !x;     // false, negates the value of x
+
+// Nullish coalescing operator (??)
+// If the value on the left is null or undefined, it returns the value on the right
+let a;                 
+let b = a ?? 10;       // b becomes 10 because a is undefined
+
+// Double NOT operator (!!)
+// Converts any value to a boolean (true or false)
+let c = "hello";
+let d = !!c;           // d becomes true because "hello" is a non-empty string (truthy)
+```
+
+&nbsp;
+### v. Ternary Operator
+The ternary operator is a shorthand for if-else statements. It uses the syntax:
+condition ? valueIfTrue : valueIfFalse
+
+&nbsp;
+**For example:** 
+```
+let age = 18;
+let canVote = (age >= 18) ? "Yes" : "No";
+console.log(canVote); // "Yes"
+```
+
+&nbsp;
+
+<details>
+<summary>📘 <strong>JavaScript Operators - Tricky Questions</strong> (click to show)</summary>
+&nbsp;
+
+> **Q: Difference between == and === ?** 
+> **A:** == checks only the value and performs type conversion if needed, while === checks both value and type without converting. For example, 5 == '5' is true, but 5 === '5' is false.
+
+> **Q: How does null == undefined and null === undefined evaluate?** 
+> **A:** null == undefined is true because they are considered loosely equal, but null === undefined is false since their types are different.
+
+> **Q: Difference between 0 == false and 0 === false ?**  
+> **A:** 0 == false is true due to type coercion, but 0 === false is false because their types do not match.
+
+> **Q: What is the result of '5' > 3 and why?**  
+> **A:** JavaScript converts the string '5' to the number 5 before comparing. So '5' > 3 evaluates to true.
+
+> **Q: What will true || false && false return?**  
+> **A:** Logical && has higher precedence than ||, so false && false is false, and then true || false is true. The final result is true.
+
+> **Q: Can logical operators return non-boolean values?**  
+> **A:** Yes. Logical operators return the actual value of operands, not just true or false. For example, 0 || 'hello' returns 'hello' and 'hi' && 0 returns 0.
+
+> **Q: Can you chain multiple ternary operators? Show an example.**  
+> **A:** Yes, you can chain them. Example:  
+> ```js
+> let age = 20;
+> let type = age < 13 ? 'kid' : age < 20 ? 'teen' : 'adult';
+> console.log(type); // 'adult'
+> ```
+
+> **Q: Explain the result of true + true in JS.**  
+> **A:** JavaScript automatically converts true to 1 when used in arithmetic. This is like using Number(true), so true + true equals 2.
+
+> **Q: How does NaN behave in comparisons?**  
+> **A:** NaN == NaN is false and NaN === NaN is also false because NaN is not equal to anything, including itself. Use isNaN() or Number.isNaN() to check for NaN.
+</details>
