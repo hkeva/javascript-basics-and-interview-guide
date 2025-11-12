@@ -142,16 +142,21 @@ if ("hello") console.log("Truthy"); // runs
 ```
 
 &nbsp;
+
 <details>
-<summary><strong>JavaScript Data Types - Tricky Questions</strong></summary>
+<summary>
+<strong> JavaScript Data Types - Tricky Questions</strong><br/>
+</summary>
+<span style="font-style: italic; font-size: smaller;">
+💡 Note: There is no example using the === operator here. It is discussed later in the Operators section.
+</span>
 <br/>
-> *💡 **Note:** There is no example using the `===` operator here. It is discussed later in the **Operators** section.*
-<br/>
-&nbsp;&nbsp;
+&nbsp;
 
-```js
-Q: What are the different data types in JavaScript?
-A: [Go to answer.](#i-dynamically-typed-language)
 
-```
+> **Q:** What are the different data types in JavaScript?  
+> **A:** [Go to answer.](#i-dynamically-typed-language)
+
+
 </details>
+
