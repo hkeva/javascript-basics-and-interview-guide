@@ -142,56 +142,16 @@ if ("hello") console.log("Truthy"); // runs
 ```
 
 &nbsp;
-#### JavaScript Data Types - Tricky Questions
-
+<details>
+<summary><strong>JavaScript Data Types - Tricky Questions</strong></summary>
+<br/>
 > *💡 **Note:** There is no example using the `===` operator here. It is discussed later in the **Operators** section.*
-
+<br/>
+&nbsp;&nbsp;
 
 ```js
-console.log(typeof null); // Output: "object" - null is a primitive, but typeof returns "object" due to historical JS quirk
-
-console.log(typeof NaN); // Output: "number" - NaN is a numeric type even though it means "Not a Number"
-
-console.log([] == false);  // Output: true - [] is converted to "" (empty string), which is falsy (like 0)
-
-console.log([1,2] + [3,4]); // Output: "1,23,4" - arrays are converted to strings and concatenated
-
-console.log(typeof (typeof 1)); // Output: "string" - typeof 1 -> "number", typeof "number" -> "string"
-
-console.log(0 == '0'); // Output: true - '0' is converted to number 0, 0 == 0
-
-console.log([] == ![]); // Output: true - ![] -> false (because [] is truthy), [] == false -> true
-
-console.log([1] == 1); // Output: true - [1] is converted to "1", then "1" == 1 -> true
-
-console.log('5' + 1); // Output: "51" - + triggers string concatenation
-
-console.log(2 + 3 + 4 + '5'); // 2+3+4=9, then 9+'5'='95' (string concatenation)
-
-console.log('5' - 1);       // Output: 4 - triggers numeric conversion ('5' -> 5, 5 - 1 = 4)
-
-console.log('10'-'4'-'3'-2+'5'); // 10-4-3-2=1, then 1+'5'='15' (string concatenation)
-
-console.log([] + []);       // Output: "" - arrays are converted to strings, "" + "" = ""
-
-console.log([] + {});       // Output: "[object Object]" - [] -> "", {} -> "[object Object]", concatenated
-
-console.log({} + []);       // Output: 0 - {} at line start treated as block, +[] -> 0
-
-console.log({} + {});       // Output: NaN - {} treated as block, +{} -> NaN
-
-console.log(false == '0');  // Output: true - '0' -> 0, false -> 0, 0 == 0
-
-console.log(true + false);  // Output: 1 - true -> 1, false -> 0, 1 + 0 = 1
-
-console.log([] == 0);       // Output: true - [] -> "" -> 0, 0 == 0
-
-console.log('' == 0);       // Output: true - '' -> 0, 0 == 0
-
-console.log(0 == []);       // Output: true - [] -> "" -> 0, 0 == 0
-
-console.log(0 == {});       // Output: false - {} -> "[object Object]" -> NaN, 0 == NaN -> false
-
-console.log(null == undefined); // Output: true - special case, null and undefined are equal with ==
+Q: What are the different data types in JavaScript?
+A: [Go to answer.](#i-dynamically-typed-language)
 
 ```
+</details>
