@@ -57,7 +57,7 @@ y = 20;
 console.log(x); // 10 (x remains unchanged)
 ```
 
-**Reference Types:** `Object`, `Array`, `Function`, etc.  
+**Reference Types:** In JavaScript, everything that’s not a primitive is an object. For example - `Object`, `Array`, `Function`, `Date`, `Map` etc.  
 - **Mutable** → their contents can be changed.  
 - **Copied by reference** → assigning an object to another variable stores a **reference (memory address) pointing to the same object in heap memory**.  
 
@@ -144,9 +144,7 @@ if ("hello") console.log("Truthy"); // runs
 &nbsp;
 
 <details>
-<summary>
-<strong> JavaScript Data Types - Tricky Questions</strong>
-</summary>
+<summary>📘 <strong>JavaScript Data Types - Tricky Questions</strong> (click to show)</summary>
 &nbsp;
 
 ```
