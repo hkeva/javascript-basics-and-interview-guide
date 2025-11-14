@@ -7,7 +7,8 @@ Ideal for **beginners** building a solid foundation or **developers** preparing 
 
 ## Table of Contents
 
-**1.** [Data Types](#data-types)
+**1.** [Data Types](#data-types)  
+<br/>
 **2.** [Operators](#operators)
 
 ---
