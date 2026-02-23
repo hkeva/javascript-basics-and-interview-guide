@@ -1,3 +1,4 @@
+<!-- prettier-ignore -->
 > **Q: What are the different data types in JavaScript?** 👉 [View explanation](./01-data-types.md#i-dynamically-typed-language)
 
 > **Q: What's the main difference between Primitive and Reference types?** 👉 [View explanation](./01-data-types.md#ii-types)
@@ -15,20 +16,16 @@
 > **Q: How does JavaScript handle type coercion?** 👉 [View answer](./02-type-coercion.md#type-coercion)
 
 > **Q: What does typeof NaN return and why?** In JavaScript, NaN is actually considered a number—even though it represents an invalid number. So typeof will always return "number" and cannot detect NaN.
-
 ```
 console.log(typeof NaN); // "number"
 ```
 
 > **Q: How do you check if a value is NaN?** The recommended way to check for NaN is using Number.isNaN():
-
 ```
 Number.isNaN(NaN);   // true
 Number.isNaN(123);   // false
 ```
-
 > **Another trick:** NaN is the only value in JavaScript that is not equal to itself. Since it represents an "undefined" or "unrepresentable" number, it cannot be meaningfully compared to anything—even itself.
-
 ```
 let x = NaN;
 console.log(x !== x);  // true
@@ -119,17 +116,13 @@ console.log(NaN !== NaN); // true
 > | Global `window` prop | ✅               | ❌         | ❌         |
 
 > **Q: Is const truly immutable?** No. `const` prevents reassignment of the variable, but the value itself can still be mutated if it's an object or array.
-
 ```js
 const obj = { a: 1 };
 obj.a = 99; // ✅ works
 obj = {}; // ❌ TypeError
 ```
 
-> **Q: What is the difference between undefined and undeclared?**
-> undefined — variable is declared but no value assigned
-> undeclared — variable was never declared, and accessing it throws ReferenceError
-
+> **Q: What is the difference between undefined and undeclared?** `undefined` — variable is declared but no value assigned. `undeclared` — variable was never declared, and accessing it throws ReferenceError
 ```js
 let x;
 console.log(x); // undefined
@@ -137,7 +130,6 @@ console.log(y); // ❌ ReferenceError: y is not defined
 ```
 
 > **Q: Does var attach to the window object?** Yes, in browsers, `var` declared in the global scope (non-module) becomes a property of window. `let` and `const` do not.
-
 ```js
 var a = 10;
 console.log(window.a); // 10 ✅
@@ -146,7 +138,6 @@ console.log(window.a); // 10 ✅
 > **Q: Can you use a variable before declaring it with `var`?** Yes. Due to hoisting, `var` declarations are registered and initialized with undefined during the creation phase, so the variable exists before its declaration but has the value undefined.
 
 > **Q: What is the output?**
-
 ```js
 var a = 1;
 {
@@ -154,5 +145,4 @@ var a = 1;
 }
 console.log(a); // 2 ❗
 ```
-
 var is not block-scoped, so both declarations refer to the same variable.
