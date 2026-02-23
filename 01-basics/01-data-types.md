@@ -4,7 +4,7 @@
 
 JavaScript is a **dynamically typed language**, because the type of a variable is determined at runtime, not at compile time.
 
-- You don’t need to declare a variable’s type (like int, string, etc.) — JavaScript figures it out automatically based on the **value** you assign.
+- You don’t need to declare a variable’s type (like int, string, etc.) - JavaScript figures it out automatically based on the **value** you assign.
 - JavaScript allows **reassigning** a variable with a value of a different type, and this is directly because of its dynamic typing.
 
 ### 💬 Example:

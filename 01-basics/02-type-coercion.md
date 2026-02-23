@@ -91,7 +91,7 @@ console.log("" === false); // false
 
 **NaN (Not a Number)**
 
-`NaN` is the result of an invalid numeric operation. It's contagious — any arithmetic involving `NaN` returns `NaN`. It also has a unique property: it is never equal to itself.
+`NaN` is the result of an invalid numeric operation. It's contagious - any arithmetic involving `NaN` returns `NaN`. It also has a unique property: it is never equal to itself.
 
 ```js
 console.log(NaN === NaN); // false (NaN is never equal to itself)
