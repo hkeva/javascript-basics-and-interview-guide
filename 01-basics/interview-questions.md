@@ -105,3 +105,54 @@ console.log(NaN !== NaN); // true
 > **Q: Explain the result of true + true in JS.** JavaScript automatically converts true to 1 when used in arithmetic. This is like using Number(true), so true + true equals 2.
 
 > **Q: How does NaN behave in comparisons?** NaN == NaN is false and NaN === NaN is also false because NaN is not equal to anything, including itself. Use isNaN() or Number.isNaN() to check for NaN.
+
+> **Q: What is the difference between `var`, `let`, and `const`?**
+>
+> | Feature              | `var`            | `let`      | `const`    |
+> | -------------------- | ---------------- | ---------- | ---------- |
+> | Introduced           | ES1              | ES6 (2015) | ES6 (2015) |
+> | Scope                | Function         | Block      | Block      |
+> | Re-declarable        | ✅               | ❌         | ❌         |
+> | Re-assignable        | ✅               | ✅         | ❌         |
+> | Must initialize      | ❌               | ❌         | ✅         |
+> | Hoisting             | ✅ (`undefined`) | ✅ (TDZ)   | ✅ (TDZ)   |
+> | Global `window` prop | ✅               | ❌         | ❌         |
+
+> **Q: Is const truly immutable?** No. `const` prevents reassignment of the variable, but the value itself can still be mutated if it's an object or array.
+
+```js
+const obj = { a: 1 };
+obj.a = 99; // ✅ works
+obj = {}; // ❌ TypeError
+```
+
+> **Q: What is the difference between undefined and undeclared?**
+> undefined — variable is declared but no value assigned
+> undeclared — variable was never declared, and accessing it throws ReferenceError
+
+```js
+let x;
+console.log(x); // undefined
+console.log(y); // ❌ ReferenceError: y is not defined
+```
+
+> **Q: Does var attach to the window object?** Yes, in browsers, `var` declared in the global scope (non-module) becomes a property of window. `let` and `const` do not.
+
+```js
+var a = 10;
+console.log(window.a); // 10 ✅
+```
+
+> **Q: Can you use a variable before declaring it with `var`?** Yes. Due to hoisting, `var` declarations are registered and initialized with undefined during the creation phase, so the variable exists before its declaration but has the value undefined.
+
+> **Q: What is the output?**
+
+```js
+var a = 1;
+{
+  var a = 2;
+}
+console.log(a); // 2 ❗
+```
+
+var is not block-scoped, so both declarations refer to the same variable.
